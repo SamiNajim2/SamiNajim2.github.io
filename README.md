@@ -14,5 +14,17 @@ Screenshot of my repo after the initial commit:
 
 
 
+## Activity 2
+Screenshot of my repo (after changing index.html):
+
+![Activity 2 repo screenshot](readme_images/repo2.png)
+
+Screenshot of my home page of my deployed website:
+
+![Activity 2 deployed site](readme_images/site.png)
+
+
+
+
 
 
