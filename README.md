@@ -10,7 +10,7 @@ https://github.com/varadbhogayata/varadbhogayata.github.io
 ## Activity 1
 Screenshot of my repo after the initial commit:
 
-![Activity 1 repo screenshot](readme_images/activity1_repo.png)
+![Activity 1 repo screenshot](readme_images/a1_repo.png)
 
 
 
