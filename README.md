@@ -36,3 +36,14 @@ Screenshot of the homepage of my deployed website:
 
 
 
+## Activity 4
+Screenshot of my repo (after changing index.html):
+
+![Activity 4 repo screenshot](readme_images/repo4.png)
+
+Screenshot of Places Travelled section in my deployed website:
+
+![Activity 4 deployed site](readme_images/site4.png)
+
+
+
