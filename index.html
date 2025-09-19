@@ -100,11 +100,6 @@
       </li>
 
       <li class="bold">
-        <a aria-label="Navigate to the Places Travelled section" href="#places-travelled" class="waves-effect waves-dark teal-text"><i
-            class="mdi-maps-place small"></i><span>Places Travelled</span></a>
-      </li>
-
-      <li class="bold">
         <a aria-label="Navigate to the Skills section" href="#skills" class="waves-effect waves-dark teal-text"><i
             class="mdi-action-assessment small"></i><span>Skills</span></a>
       </li>
@@ -112,6 +107,11 @@
       <li class="bold">
         <a aria-label="Navigate to the Education section" href="#education" class="waves-effect waves-dark teal-text"><i
             class="mdi-social-school small"></i><span>Education</span></a>
+      </li>
+
+      <li class="bold">
+        <a aria-label="Navigate to the Places Travelled section" href="#places-travelled" class="waves-effect waves-dark teal-text"><i
+            class="mdi-maps-place small"></i><span>Places Travelled</span></a>
       </li>
 
       <li class="bold">
@@ -154,10 +154,6 @@
             class="mdi-av-my-library-books small"></i><span>Projects</span></a>
       </li>
       <li class="bold">
-        <a aria-label="Navigate to the Places Travelled section" href="#places-travelled" class="waves-effect waves-dark teal-text"><i
-            class="mdi-maps-place small"></i><span>Places Travelled</span></a>
-      </li>
-      <li class="bold">
         <a aria-label="Navigate to the Skills section" href="#skills" class="waves-effect waves-dark teal-text"><i
             class="mdi-action-assessment small"></i><span>Skills</span></a>
       </li>
@@ -166,6 +162,12 @@
         <a aria-label="Navigate to the Education section" href="#education" class="waves-effect waves-dark teal-text"><i
             class="mdi-social-school small"></i><span>Education</span></a>
       </li>
+
+      <li class="bold">
+        <a aria-label="Navigate to Places Travelled" href="#places-travelled" class="waves-effect waves-dark teal-text"><i
+            class="mdi-maps-place small"></i><span>Places Travelled</span></a>
+      </li>
+
       <li class="bold">
         <a aria-label="Navigate to the Contact section" href="#contact" class="waves-effect waves-dark teal-text"><i
             class="mdi-content-mail small"></i><span>Contact</span></a>
@@ -234,7 +236,6 @@
         </p>
       </div>
     </section>
-
 
     <!-- Third Section: Experience -->
     <section id="experience" class="section scrollspy">
@@ -320,13 +321,27 @@
       </div>
     </section>
 
-    <!-- Fourth Section: Projects -->
+    <!-- ===== Activity 5: Recent Projects (Dynamic) ===== -->
+    <section id="recent-projects-section" class="section scrollspy">
+      <h3 class="page-title white-text teal">Recent Projects</h3>
+      <div class="container">
+        <!-- JS injects cards here -->
+        <div id="recent-projects" class="row"></div>
+        <div class="row">
+          <div class="col s12 center">
+            <a id="load-more-projects" class="btn waves-effect teal">Load More</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Fourth Section: Projects (static cards kept as-is) -->
     <section id="projects" class="section scrollspy">
       <h3 class="page-title white-text teal">Projects</h3>
       <div class="container">
         <div class="row">
 
-          <!-- GIS Mapper (static card) -->
+          <!-- GIS Mapper -->
           <div class="col s12 m6 l4">
             <div class="card medium">
               <div class="card-image waves-effect waves-block waves-light">
@@ -350,7 +365,7 @@
             </div>
           </div>
 
-          <!-- Diabetic Retinopathy Detection (static card) -->
+          <!-- Diabetic Retinopathy Detection (uses SAME image as GIS Mapper) -->
           <div class="col s12 m6 l4">
             <div class="card medium">
               <div class="card-image waves-effect waves-block waves-light">
@@ -374,31 +389,8 @@
             </div>
           </div>
 
+          <!-- Add more cards here if needed -->
         </div>
-
-        <!-- Recent Projects (Dynamic) -->
-        <h4 class="brown-text light" style="margin-top:10px;">Recent Projects (Dynamic)</h4>
-        <div id="recent-projects" class="row"></div>
-        <div class="center-align" style="margin-top:10px;">
-          <a id="load-more-projects" class="btn waves-effect waves-light">Load More</a>
-        </div>
-      </div>
-    </section>
-
-    <!-- New Section: Places Travelled -->
-    <section id="places-travelled" class="section scrollspy">
-      <h3 class="page-title white-text teal">Places Travelled</h3>
-      <div class="container">
-        <div class="map-container" style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;border-radius:8px;">
-          <iframe
-            src="https://www.google.com/maps/d/u/0/embed?mid=1Jc6z2Scm18_hZidFANlHnWoQCztHPxo&ehbc=2E312F"
-            style="position:absolute;top:0;left:0;width:100%;height:100%;border:0;"
-            allowfullscreen
-            loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade">
-          </iframe>
-        </div>
-        <p class="grey-text" style="margin-top:10px;">Tip: zoom or click markers to explore.</p>
       </div>
     </section>
 
@@ -454,6 +446,21 @@
                 <p class="brown-text">Bachelor of Applied Science and Engineering – Computer Engineering (with PEY Co-op)</p>
                 <p>Sep. 2022 – May 2026 • Toronto, Canada</p>
               </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Places Travelled -->
+    <section id="places-travelled" class="section scrollspy">
+      <h3 class="page-title white-text teal">Places Travelled</h3>
+      <div class="container">
+        <div class="card">
+          <div class="card-content">
+            <p class="brown-text">A map of places I’ve visited so far.</p>
+            <div class="video-container" style="height:auto;">
+              <iframe src="https://www.google.com/maps/d/u/0/embed?mid=1Jc6z2Scm18_hZidFANlHnWoQCztHPxo&ehbc=2E312F" width="640" height="480" style="border:0; width:100%; min-height:420px;" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
           </div>
         </div>
@@ -521,25 +528,20 @@
       }
       init();
     })();
-  </script>
 
-  <!-- ===== Activity 5: Dynamic "Recent Projects" ===== -->
-  <script>
-    // Projects data (newest first by date after sort)
+    /* ===== Activity 5: Dynamic "Recent Projects" ===== */
     const projects = [
       {
-        title: "mymentor.live",
-        description:
-          "AI tools for every student: Essay Writer (outlines, full essays, citations), AI Flashcards, and exam prep helpers.",
-        image: "/readme_images/mymentor.png",   // your uploaded image
-        tech: "Node.js, html, css",
-        date: "2025-03-01"
+        title: "Portfolio Website v2",
+        description: "Revamped personal site (new theme color, dynamic projects, Places Travelled).",
+        image: "/assets/img/project-music-player.png",
+        tech: "HTML, CSS, JavaScript, GitHub Pages",
+        date: "2025-02-01"
       },
       {
         title: "Diabetic Retinopathy Detection",
-        description:
-          "ResNet-152 model to classify 5 stages of diabetic retinopathy with strong performance.",
-        image: "/assets/img/project-music-player.png", // same image as GIS Mapper
+        description: "ResNet-152 model to classify 5 DR stages with strong performance.",
+        image: "/assets/img/project-music-player.png",  // same image as GIS Mapper per your choice
         tech: "Python, PyTorch, ResNet-152, Google Colab",
         date: "2024-09-01"
       },
