@@ -109,12 +109,9 @@
             class="mdi-social-school small"></i><span>Education</span></a>
       </li>
 
-      <!-- NEW: Places Travelled (desktop nav) -->
       <li class="bold">
-        <a aria-label="Navigate to the Places Travelled section" href="#places-travelled"
-           class="waves-effect waves-dark teal-text">
-           <i class="mdi-maps-place small"></i><span>Places Travelled</span>
-        </a>
+        <a aria-label="Navigate to the Places Travelled section" href="#places-travelled" class="waves-effect waves-dark teal-text"><i
+            class="mdi-maps-place small"></i><span>Places Travelled</span></a>
       </li>
 
       <li class="bold">
@@ -166,12 +163,9 @@
             class="mdi-social-school small"></i><span>Education</span></a>
       </li>
 
-      <!-- NEW: Places Travelled (mobile nav) -->
       <li class="bold">
-        <a aria-label="Navigate to the Places Travelled section" href="#places-travelled"
-           class="waves-effect waves-dark teal-text">
-           <i class="mdi-maps-place small"></i><span>Places Travelled</span>
-        </a>
+        <a aria-label="Navigate to Places Travelled" href="#places-travelled" class="waves-effect waves-dark teal-text"><i
+            class="mdi-maps-place small"></i><span>Places Travelled</span></a>
       </li>
 
       <li class="bold">
@@ -242,7 +236,6 @@
         </p>
       </div>
     </section>
-
 
     <!-- Third Section: Experience -->
     <section id="experience" class="section scrollspy">
@@ -328,7 +321,21 @@
       </div>
     </section>
 
-    <!-- Fourth Section: Projects -->
+    <!-- ===== Activity 5: Recent Projects (Dynamic) ===== -->
+    <section id="recent-projects-section" class="section scrollspy">
+      <h3 class="page-title white-text teal">Recent Projects</h3>
+      <div class="container">
+        <!-- JS injects cards here -->
+        <div id="recent-projects" class="row"></div>
+        <div class="row">
+          <div class="col s12 center">
+            <a id="load-more-projects" class="btn waves-effect teal">Load More</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Fourth Section: Projects (static cards kept as-is) -->
     <section id="projects" class="section scrollspy">
       <h3 class="page-title white-text teal">Projects</h3>
       <div class="container">
@@ -387,6 +394,44 @@
       </div>
     </section>
 
+    <!-- Fifth Section: Skills -->
+    <section id="skills" class="section scrollspy">
+      <h3 class="page-title white-text teal">Skills</h3>
+      <div class="container">
+        <div class="row">
+
+          <div class="col s12 m6">
+            <ul class="collection with-header">
+              <li class="collection-header"><h5>Languages & Frameworks</h5></li>
+              <li class="collection-item">Python, C++, C, JavaScript, SQL, ReactJS, Node.js, Flask, Django</li>
+            </ul>
+          </div>
+
+          <div class="col s12 m6">
+            <ul class="collection with-header">
+              <li class="collection-header"><h5>ML / Data</h5></li>
+              <li class="collection-item">PyTorch, TensorFlow, scikit-learn, NumPy, Pandas, Matplotlib</li>
+            </ul>
+          </div>
+
+          <div class="col s12 m6">
+            <ul class="collection with-header">
+              <li class="collection-header"><h5>Platforms & Tools</h5></li>
+              <li class="collection-item">AWS, Azure, Dataiku, OpenAI, Cohere, Git, Docker, PowerBI, Tableau, FPGA, Verilog</li>
+            </ul>
+          </div>
+
+          <div class="col s12 m6">
+            <ul class="collection with-header">
+              <li class="collection-header"><h5>Certifications</h5></li>
+              <li class="collection-item">Microsoft Azure Fundamentals, Dataiku Core Designer, AI for Everyone (Coursera)</li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
     <!-- Sixth Section: Education -->
     <section id="education" class="section scrollspy">
       <h3 class="page-title white-text teal">Education</h3>
@@ -407,22 +452,22 @@
       </div>
     </section>
 
-    <!-- NEW Seventh Section: Places Travelled -->
+    <!-- Places Travelled -->
     <section id="places-travelled" class="section scrollspy">
       <h3 class="page-title white-text teal">Places Travelled</h3>
       <div class="container">
         <div class="card">
           <div class="card-content">
-            <p class="brown-text">A map of cities I’ve visited. Zoom and pan to explore.</p>
-            <div class="video-container">
-              <iframe src="https://www.google.com/maps/d/u/0/embed?mid=1Jc6z2Scm18_hZidFANlHnWoQCztHPxo&ehbc=2E312F" width="640" height="480" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <p class="brown-text">A map of places I’ve visited so far.</p>
+            <div class="video-container" style="height:auto;">
+              <iframe src="https://www.google.com/maps/d/u/0/embed?mid=1Jc6z2Scm18_hZidFANlHnWoQCztHPxo&ehbc=2E312F" width="640" height="480" style="border:0; width:100%; min-height:420px;" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Eighth Section: Contact -->
+    <!-- Seventh Section: Contact -->
     <section id="contact" class="section scrollspy full-height">
       <h3 class="page-title white-text teal">Contact</h3>
       <div class="container">
@@ -483,6 +528,81 @@
       }
       init();
     })();
+
+    /* ===== Activity 5: Dynamic "Recent Projects" ===== */
+    const projects = [
+      {
+        title: "Portfolio Website v2",
+        description: "Revamped personal site (new theme color, dynamic projects, Places Travelled).",
+        image: "/assets/img/project-music-player.png",
+        tech: "HTML, CSS, JavaScript, GitHub Pages",
+        date: "2025-02-01"
+      },
+      {
+        title: "Diabetic Retinopathy Detection",
+        description: "ResNet-152 model to classify 5 DR stages with strong performance.",
+        image: "/assets/img/project-music-player.png",  // same image as GIS Mapper per your choice
+        tech: "Python, PyTorch, ResNet-152, Google Colab",
+        date: "2024-09-01"
+      },
+      {
+        title: "GIS Mapper",
+        description: "Interactive mapping application comparable to Google Maps.",
+        image: "/assets/img/project-music-player.png",
+        tech: "C++, GladeUI",
+        date: "2024-04-01"
+      }
+    ];
+
+    // Sort newest -> oldest
+    projects.sort((a, b) => new Date(b.date) - new Date(a.date));
+
+    const container = document.getElementById("recent-projects");
+    const loadMoreBtn = document.getElementById("load-more-projects");
+    let shown = 0;
+    const CHUNK = 1; // show 1 on load, then +1 each click
+
+    function createProjectCard(p) {
+      const col = document.createElement("div");
+      col.className = "col s12 m6 l4";
+      col.innerHTML = `
+        <div class="card medium">
+          <div class="card-image waves-effect waves-block waves-light">
+            <img alt="${p.title}" src="${p.image}" style="height: 100%; width: 100%" class="activator" />
+          </div>
+          <div class="card-content">
+            <span class="card-title activator teal-text hoverline">${p.title}
+              <i class="mdi-navigation-more-vert right"></i>
+            </span>
+            <p>${p.description}</p>
+          </div>
+          <div class="card-reveal">
+            <span class="card-title brown-text">${p.title}
+              <i class="mdi-navigation-close right"></i>
+            </span>
+            <ul>
+              <li><b>Tech:</b> ${p.tech}</li>
+              <li><b>Date:</b> ${p.date}</li>
+            </ul>
+          </div>
+        </div>
+      `;
+      return col;
+    }
+
+    function renderNextChunk() {
+      const next = projects.slice(shown, shown + CHUNK);
+      next.forEach(p => container.appendChild(createProjectCard(p)));
+      shown += next.length;
+      if (shown >= projects.length) {
+        loadMoreBtn.style.display = "none";
+      }
+    }
+
+    // Initial render (only latest)
+    renderNextChunk();
+
+    loadMoreBtn.addEventListener("click", renderNextChunk);
   </script>
 
 </body>
