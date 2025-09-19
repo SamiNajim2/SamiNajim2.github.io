@@ -47,3 +47,11 @@ Screenshot of Places Travelled section in my deployed website:
 
 
 
+## Activity 5
+Screenshot of my repo (after changing index.html):
+
+![Activity 5 repo screenshot](readme_images/repo5.png)
+
+Screenshot of "Recent Project" section in my deployed website (Dynamic Content):
+
+![Activity 5 deployed site](readme_images/site5.png)
